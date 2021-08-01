@@ -1,5 +1,5 @@
 import pytest
-from apps.quick_Sort import QuickSort
+from apps.algorithms.quick_Sort import QuickSort
 from typing import List
 
 class Test_Quick_Sort():

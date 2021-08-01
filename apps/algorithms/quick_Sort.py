@@ -39,7 +39,6 @@ class QuickSort:
       
 quickSort=QuickSort()
 arr: List[int] = [1000, 10, 7, 8, 9, 30, 900, 1, 5, 6, 20]
-a = [1000, 10, 7, 8, 9, 30, 900, 1, 5, 6, 20]
 sizeOfArr: int = len(arr)
 quickSort.sort(arr, 0, sizeOfArr-1)
 print("Sorted array :")
