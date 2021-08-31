@@ -9,7 +9,7 @@ sudo apt-get update
 sudo apt-get -y install python3-pip
 
 ## Freeze all pip3 installations
-pip3 freeze > requirements.txt
+pip freeze > requirements.txt
 
 ## Creating the virtual environment
 sudo apt install -y python3-virtualenv
@@ -22,4 +22,4 @@ source venv/bin/activate
 .\venv\Scripts\activate
 
 ## Installing Python dependencies
-pip3 install -r requirements.txt
+pip install -r requirements.txt
