@@ -28,7 +28,7 @@ def count_https_in_web_pages():
 
 
 async def better_count_https_in_web_pages():
-    with open('top15USWebsites.txt', 'r', encoding='utf-8') as f:
+    with open('/home/girish/VisualCodeWorkspace/skills-brushup/apps/poc/performance_test/top15USWebsites.txt', 'r', encoding='utf-8') as f:
         urls = [line.strip() for line in f.readlines()]
 
     async with httpx.AsyncClient() as client:
@@ -59,10 +59,10 @@ def main():
     # print(f'done in {elapsed:.2f}s')
 
     # with cProfile.Profile() as pr:
-    #     asyncio.run(better_count_https_in_web_pages())
-
+    #     count_https_in_web_pages()
+    
     with cProfile.Profile() as pr:
-        count_https_in_web_pages()
+        asyncio.run(better_count_https_in_web_pages())
 
     stats = pstats.Stats(pr)
     stats.sort_stats(pstats.SortKey.TIME)
